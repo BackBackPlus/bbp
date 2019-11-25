@@ -1,6 +1,6 @@
 from . import main
 
 
-@main.route('/learning', method=['POST'])
+@main.route('/', method=['POST'])
 def home():
     return

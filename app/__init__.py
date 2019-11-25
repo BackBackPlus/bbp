@@ -1,4 +1,7 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
 
 
 def create_app() -> Flask:
@@ -7,6 +10,7 @@ def create_app() -> Flask:
     app = Flask(__name__)
     # 增加app系统配置
     app.config.from_object(BaseConfig)
+    # app.init
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
