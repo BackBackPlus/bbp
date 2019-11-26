@@ -11,5 +11,5 @@ def home(id):
         return JsonFunc.not_found()
     plan = Plan.query.filter_by(user_name=user.username)
     curr_plan = plan.query.order_by(plan.last_time.desc())
-    return JsonFunc.home()(name=user.username)
+    return JsonFunc(name=user.username).return_json()
 
