@@ -5,7 +5,7 @@ db = SQLAlchemy()
 
 
 def create_app() -> Flask:
-    from config import BaseConfig
+    from config import config
     # 实例化实现了wsgi接口功能的flask对象
     app = Flask(__name__)
     # 增加app系统配置
