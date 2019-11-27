@@ -1,7 +1,8 @@
 import os
 
+
 class Config(object):
-    DEBUG = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = False  # 追踪对象的修改
 
     @staticmethod
     def init_app(app):
@@ -13,6 +14,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
                               'mysql://root:123456@localhost/bbplus'
+
 
 
 class TestingConfig(Config):
