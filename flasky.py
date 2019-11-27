@@ -1,6 +1,6 @@
 import os
 
-from .app import create_app
+from app import create_app
 
 
 # 如果已经定义了环境变量FLASK_CONFIG，则从中读取配置名；
