@@ -10,22 +10,10 @@ class Word(db.Model):
     definition = db.Column(db.Text())
     translation = db.Column(db.Text())
     tag = db.Column(db.VARCHAR(64))
-    #
-    # @staticmethod
-    # def insert_words(csv_file_path, table_name, database):
-    #     """批量添加单词数据到词库"""
-    #     import pandas as pd
-    #     df = pd.read_csv(csv_file_path, keep_default_na=False, encoding='utf-8')
-    #     values = df.values.tolist()
-    pass
     # sw = db.Column(db.VARCHAR(64))
-    phonetic = db.Column(db.VARCHAR(64))
-    definition = db.Column(db.Text())
-    translation = db.Column(db.Text())
     # pos = db.Column(db.VARCHAR(16))
     # collins = db.Column(db.Integer, default=0)
     # oxford = db.Column(db.Integer, default=0)
-    tag = db.Column(db.VARCHAR(64))
     # bnc = db.Column(db.Integer)
     # frq = db.Column(db.Integer)
     # exchange = db.Column(db.Text())
