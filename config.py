@@ -18,12 +18,12 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-                              'mysql://用户名:密码@localhost/test_数据库名'
+                              'mysql://root:123456@localhost/bbplus'
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-                              'mysql://用户名:密码@localhost/数据库名'
+                              'mysql://root:123456@localhost/bbplus'
 
 
 # config 字典中注册了不同的配置环境，而且还注册了一个默认配置
