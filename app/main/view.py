@@ -4,7 +4,7 @@ from ..models import User, Plan
 from ..json_func import JsonFunc
 
 
-@main.route('/<int:id>', method=['POST'])
+@main.route('/<int:id>', methods=['POST'])
 def home(id):
     user = User.query.filter_by(id=id).first()
     if user is None:
