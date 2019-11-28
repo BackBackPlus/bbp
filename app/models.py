@@ -34,3 +34,4 @@ class User(db.Model):
 class Plan(db.Model):
     __tablename__ = 'plans'
     id = db.Column(db.Integer, primary_key=True)
+

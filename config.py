@@ -13,7 +13,7 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
-                              'mysql://root:1234@localhost/dev_bbp'
+                              'mysql://root:123456@localhost/bbplus'
 
 
 class TestingConfig(Config):

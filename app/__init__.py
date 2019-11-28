@@ -19,7 +19,7 @@ def create_app(config_name):
 
     # 插入数据
     with app.test_request_context():
-        db.create_all()
+        # 注意：插入数据之前先在命令行进行db.create_all()操作
         from app import insert_word
         insert_word.cet4()
 
